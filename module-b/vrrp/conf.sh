@@ -4,7 +4,7 @@ cp /etc/keepalived/*.conf.example /etc/keepalived/keepalived.conf
 vim /etc/keepalived/keepalived.conf |
 global_defs {
     enable_script_security
-    script_user
+    script_user root
 }
 vrrp_script health_check {
     script "/opt/check.sh"
@@ -36,7 +36,7 @@ check.sh < ping -W 2 -c 1 77.88.8.8 > /dev/null 2>&1
 vim /etc/keepalived/keepalived.conf |
 global_defs {
     enable_script_security
-    script_user
+    script_user root
 }
 vrrp_script health_check {
     script "/opt/check.sh"

@@ -10,6 +10,12 @@ vtysh
 ~do wr
 ~exit
 ~show run
+~area 0 aunthentication
+~exit
+~interface enp1s0 
+    ip ospf passive
+~interface tun*
+   ip ospf authenticaion-key PASS 
 # Check neib
 ~do sh ip ospf nei
 # Check route 
