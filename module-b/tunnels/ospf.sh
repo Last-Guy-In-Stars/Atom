@@ -10,7 +10,7 @@ vtysh
 ~do wr
 ~exit
 ~show run
-~area 0 aunthentication
+~area 0 aunthentication 
 ~exit
 ~interface enp1s0 
     ip ospf passive

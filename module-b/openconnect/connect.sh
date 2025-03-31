@@ -1,4 +1,5 @@
 #!/bin/bash
+# !NFTABLES SET TUN1!
 # DONT FORGET SET NAT
 # ON SERVER
 apt install ocserv
@@ -6,7 +7,8 @@ apt install ocserv
 server-cert =
 server-key = 
 default-domain =
-ipv4-network = 
+ipv4-network = 10.255.255.0
+ipv4-netmask = 255.255.255.0
 dns(x2) =
 delete default route
 config-per-user = # uncomment this 
